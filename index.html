@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maike Treppmann</title>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/fontstyles.css">
+</head>
+<body>
+	<div class="coverimage"/></div>
+	<div class="textured-gradient"></div>
+	<div class="image"></div>
+	
+	
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" style="position:absolute; z-index:-1;">
+		<defs>
+			<filter id="soft-noise">
+				<feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="turbulence"/>
+				<feDiffuseLighting in="turbulence" lighting-color="white" surfaceScale="2" result="light">
+					<feDistantLight azimuth="45" elevation="55" />
+				</feDiffuseLighting>
+				<feGaussianBlur in="light" stdDeviation=".5" result="blur" />
+				<feBlend in="SourceGraphic" in2="blur" mode="multiply" />
+			</filter>
+		</defs>
+	</svg>
+	
+	
+	<div id="container">
+		<div id="h1">Maike</div>
+		<div class="links">
+			<div class="social"><a href="https://www.instagram.com/maiketreppmann">Instagram</a></div>
+			<div class="contact" id="sendEmail">
+					<span class="pref">hello</span><span class="post">maike</span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- <canvas id="bubbleCanvas" width="1920" height="1080"></canvas> -->
+
+	<script src="assets/script.js"></script>
+</body>
+</html>

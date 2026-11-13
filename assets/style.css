@@ -1,0 +1,121 @@
+body, html {
+	height: 100vw;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	font-family: 'salomeregular', sans-serif; 
+	background: none;
+	/* Position and size the background image */
+	background-position: right center; /* Align the image to the right */
+	background-size: 50% 100%; /* 50% width of the container and 100% of the height */
+	background-repeat: no-repeat; /* Prevent the image from repeating */
+	overflow: hidden;
+	
+}
+
+.textured-gradient {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+	/* Adjust height and width as needed */
+	height: 100vh;
+	width: 100vw;
+
+	background-image: linear-gradient(45deg, #FFA8A8, #FFD1BB);
+	/* Set the blend mode for the texture */
+	filter: url(#soft-noise);
+	background-blend-mode: multiply; /* You can try different blend modes like multiply, screen, etc. */
+
+	/* Ensure both layers cover the entire element and tile/repeat as needed */
+	background-size: cover; 
+	background-repeat: no-repeat;
+}
+
+.coverimage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	
+	width: 100vw;
+	height: 15vh;
+	
+	mix-blend-mode: multiply;
+	
+	background-color: white; 
+	background-image: url('maikelandscapecropped.jpg');
+	background-position: left center;
+	background-size: cover; 
+	background-repeat: no-repeat; 
+}
+
+
+#h1  {
+	
+  font-size: 25vw;
+  letter-spacing: -1.2vw;
+  color: rgba(255,235,223,1);
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, .1), 0px 12px 36px rgba(236, 146, 131, .3), 0px 36px 96px rgba(236,146, 131, .8);
+  font-family: 'salomeregular', sans-serif; /* Replace with the actual font you're using */
+  vertical-align: bottom;
+  
+}
+
+.links > div {
+	margin-top: 10%;
+}
+
+#container {
+	position: absolute;
+	z-index: 1;
+	/* pointer-events: none; */
+	width: 100vw;
+	display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-size: 5vw;
+	color: rgba(0,0,0,.6);
+	font-family: 'Helvetica', sans-serif;
+	text-align: center;
+}
+
+a, a:visited {
+    color: rgba(0,0,0,.6);
+    text-decoration: none;
+    pointer-events: all !important;
+}
+
+.pref::after {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	content: "@";
+	margin: 0 0 0 .1em;
+}
+
+.post::after {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	content: ".tv";
+}
+
+.contact, .social {
+	pointer-events: all !important;
+	cursor: pointer !important;
+}
+
+#bubbleCanvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	/* Adjust height and width as needed */
+	height: 100vh;
+	width: 100vw;
+	background: none;
+	mix-blend-mode: multiply;
+}
